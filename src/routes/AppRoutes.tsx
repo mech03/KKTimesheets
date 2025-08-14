@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import C404Dashboard from '../features/c404/C404Dashboard';
-import AvailableShifts from '../Pages/AvailableShifts';
-import MyBookings from '../Pages/MyBookings';
-import TimesheetsC404 from '../Pages/TimesheetsC404';
-import Messages from '../Pages/Messages';
-import Payslips from '../Pages/Payslips';
-import ProfileCompliance from '../Pages/ProfileCompliance';
+import AvailableShifts from '../pages/AvailableShifts';
+import MyBookings from '../pages/MyBookings';
+import TimesheetsC404 from '../pages/TimesheetsC404';
+import Messages from '../pages/Messages';
+import Payslips from '../pages/Payslips';
+import ProfileCompliance from '../pages/ProfileCompliance';
 
 export default function AppRoutes() {
   return (

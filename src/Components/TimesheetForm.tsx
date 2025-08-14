@@ -1,5 +1,4 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import "../Pages/TimesheetForm.css";
 
 interface TimesheetData {
   code: string;
@@ -36,90 +35,99 @@ export default function TimesheetForm({ onSubmit }: TimesheetFormProps) {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Timesheet Data:", formData);
-    alert("Timesheet submitted!");
     if (onSubmit) onSubmit(formData);
+    console.log("Timesheet Data:", formData);
   };
 
   return (
-    <div className="timesheet-container">
-      <h2>Timesheet Sample</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Code:
-          <input
-            type="text"
-            name="code"
-            placeholder="304"
-            value={formData.code}
-            onChange={handleChange}
-            required
-          />
-        </label>
+    <div className="card shadow-sm"> 
+      <div className="card-body">
+        <h5 className="card-title mb-3">Submit Timesheet</h5>
+        <form onSubmit={handleSubmit} className="d-flex flex-column gap-3">
+          <div>
+            <label className="form-label">Code</label>
+            <input
+              type="text"
+              name="code"
+              placeholder="304"
+              value={formData.code}
+              onChange={handleChange}
+              className="form-control"
+              required
+            />
+          </div>
 
-        <label>
-          SU Name:
-          <input
-            type="text"
-            name="suName"
-            placeholder="Sophie"
-            value={formData.suName}
-            onChange={handleChange}
-            required
-          />
-        </label>
+          <div>
+            <label className="form-label">SU Name</label>
+            <input
+              type="text"
+              name="suName"
+              placeholder="Sophie"
+              value={formData.suName}
+              onChange={handleChange}
+              className="form-control"
+              required
+            />
+          </div>
 
-        <label>
-          Start Time:
-          <input
-            type="time"
-            name="startTime"
-            value={formData.startTime}
-            onChange={handleChange}
-            required
-          />
-        </label>
+          <div>
+            <label className="form-label">Start Time</label>
+            <input
+              type="time"
+              name="startTime"
+              value={formData.startTime}
+              onChange={handleChange}
+              className="form-control"
+              required
+            />
+          </div>
 
-        <label>
-          End Time:
-          <input
-            type="time"
-            name="endTime"
-            value={formData.endTime}
-            onChange={handleChange}
-            required
-          />
-        </label>
+          <div>
+            <label className="form-label">End Time</label>
+            <input
+              type="time"
+              name="endTime"
+              value={formData.endTime}
+              onChange={handleChange}
+              className="form-control"
+              required
+            />
+          </div>
 
-        <label>
-          Duration (hours):
-          <input
-            type="number"
-            name="duration"
-            placeholder="5"
-            value={formData.duration}
-            onChange={handleChange}
-            required
-          />
-        </label>
+          <div>
+            <label className="form-label">Duration (hours)</label>
+            <input
+              type="number"
+              name="duration"
+              placeholder="5"
+              value={formData.duration}
+              onChange={handleChange}
+              className="form-control"
+              required
+            />
+          </div>
 
-        <label>
-          Select Option:
-          <select
-            name="shiftType"
-            value={formData.shiftType}
-            onChange={handleChange}
-            required
-          >
-            <option value="">--Choose--</option>
-            <option value="N/A">N/A</option>
-            <option value="Sleep in">Sleep in</option>
-            <option value="Waking night">Waking night</option>
-          </select>
-        </label>
+          <div>
+            <label className="form-label">Shift Type</label>
+            <select
+              name="shiftType"
+              value={formData.shiftType}
+              onChange={handleChange}
+              className="form-select"
+              required
+            >
+              <option value="">--Choose--</option>
+              <option value="N/A">N/A</option>
+              <option value="Sleep in">Sleep in</option>
+              <option value="Waking night">Waking night</option>
+            </select>
+          </div>
 
-        <button type="submit">Submit Timesheet</button>
-      </form>
+          <button type="submit" className="btn btn-primary">
+            Submit Timesheet
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

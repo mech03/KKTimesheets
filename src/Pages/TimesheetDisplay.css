@@ -1,12 +1,14 @@
 .timesheet-display-container {
-    max-width: 450px;
-    margin: 30px auto;
+    max-width: 600px;
+    min-width: 400px;
     padding: 25px;
+    flex: 1;
     background-color: #1e293b; 
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     font-family: Arial, sans-serif;
     color: #f8fafc; 
+    height: fit-content;
   }
   
   .timesheet-display-container h2 {

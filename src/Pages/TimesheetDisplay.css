@@ -1,31 +1,35 @@
 .timesheet-display-container {
-    max-width: 600px;
+    max-width: 450px;
     margin: 30px auto;
-    padding: 20px;
-    background-color: #f8fafc;
+    padding: 25px;
+    background-color: #1e293b; 
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     font-family: Arial, sans-serif;
+    color: #f8fafc; 
   }
   
   .timesheet-display-container h2 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.5rem;
-    color: #1e293b;
+    color: #f8fafc;
   }
   
   .timesheet-table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
   }
   
   .timesheet-table th,
   .timesheet-table td {
-    border: 1px solid #cbd5e1;
-    padding: 10px 12px;
+    border: 1px solid #334155;
+    padding: 10px;
     text-align: center;
     font-size: 1rem;
+    color: #f8fafc;
+    border-radius: 5px;
   }
   
   .timesheet-table th {
@@ -35,16 +39,22 @@
   }
   
   .timesheet-table tr:nth-child(even) {
-    background-color: #e2e8f0;
+    background-color: #334155;
+  }
+  
+  .timesheet-table tr:nth-child(odd) {
+    background-color: #1f2937;
   }
   
   .timesheet-table tr:hover {
-    background-color: #dbeafe;
+    background-color: #2563eb;
+    color: white;
   }
   
   .no-data {
     text-align: center;
-    color: #6b7280;
+    color: #94a3b8; 
     font-size: 1rem;
+    margin-top: 10px;
   }
   

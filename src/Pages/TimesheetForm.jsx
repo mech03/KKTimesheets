@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./TimesheetForm.css"; 
 
-export default function TimesheetForm() {
+export default function TimesheetForm({onSubmit}) {
   const [formData, setFormData] = useState({
     code: "",
     suName: "",
@@ -23,7 +23,7 @@ export default function TimesheetForm() {
     e.preventDefault();
     console.log("Timesheet Data:", formData);
     alert("Timesheet submitted!");
-    if (props.onSubmit) props.onSubmit(formData);
+    if (onSubmit) onSubmit(formData);
   };
 
   return (

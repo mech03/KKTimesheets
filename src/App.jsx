@@ -1,20 +1,5 @@
-import React from "react";
-import Navbar from "./Components/Navbar";
-import Timesheet from "./Pages/Timesheet";
+import AppRoutes from './routes/AppRoutes';
 
-function App() {
-  const handleSignOut = () => {
-    alert("Signing out...");
-  };
-
-  return (
-    <>
-      <div>
-        <Navbar username="John Doe" onSignOut={handleSignOut} />
-        <Timesheet />
-      </div>
-    </>
-  );
+export default function App() {
+  return <AppRoutes />;
 }
-
-export default App;

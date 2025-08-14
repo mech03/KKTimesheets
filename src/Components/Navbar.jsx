@@ -8,7 +8,7 @@ const Navbar = ({ username, onSignOut }) => {
         <span className="navbar-logo">C404</span>
         <ul className="navbar-links">
           <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="/work">Work Schedule</a></li>
+          <li><a href="/workschedule">Work Schedule</a></li>
           <li><a href="/timesheet">Timesheet</a></li>
           <li><a href="/payslip">Payslip</a></li>
         </ul>

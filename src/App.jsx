@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
+import Timesheet from "./Pages/Timesheet";
 
 function App() {
   const handleSignOut = () => {
@@ -8,9 +9,9 @@ function App() {
 
   return (
     <>
-      <Navbar username="John Doe" onSignOut={handleSignOut} />
-      <div style={{ padding: "20px" }}>
-        <h1>Welcome to the Employee Timesheet System</h1>
+      <div>
+        <Navbar username="John Doe" onSignOut={handleSignOut} />
+        <Timesheet />
       </div>
     </>
   );

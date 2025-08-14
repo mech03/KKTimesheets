@@ -1,0 +1,62 @@
+.timesheet-container {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f8fafc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .timesheet-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #1e293b;
+  }
+  
+  .timesheet-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timesheet-container label {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #1e293b;
+  }
+  
+  .timesheet-container input,
+  .timesheet-container select {
+    margin-top: 5px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .timesheet-container input:focus,
+  .timesheet-container select:focus {
+    outline: none;
+    border-color: #3b82f6; 
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  
+  .timesheet-container button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .timesheet-container button:hover {
+    background-color: #2563eb;
+  }
+  

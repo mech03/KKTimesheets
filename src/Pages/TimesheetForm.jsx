@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Timesheet.css"; 
+import "./TimesheetForm.css"; 
 
-export default function Timesheet() {
+export default function TimesheetForm() {
   const [formData, setFormData] = useState({
     code: "",
     suName: "",
@@ -23,6 +23,7 @@ export default function Timesheet() {
     e.preventDefault();
     console.log("Timesheet Data:", formData);
     alert("Timesheet submitted!");
+    if (props.onSubmit) props.onSubmit(formData);
   };
 
   return (
@@ -34,6 +35,7 @@ export default function Timesheet() {
           <input
             type="text"
             name="code"
+            placeholder="304"
             value={formData.code}
             onChange={handleChange}
             required
@@ -45,6 +47,7 @@ export default function Timesheet() {
           <input
             type="text"
             name="suName"
+            placeholder="Sophie"
             value={formData.suName}
             onChange={handleChange}
             required
@@ -78,6 +81,7 @@ export default function Timesheet() {
           <input
             type="number"
             name="duration"
+            placeholder="5"
             value={formData.duration}
             onChange={handleChange}
             required

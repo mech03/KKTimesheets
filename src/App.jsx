@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
-import Timesheet from "./Pages/Timesheet";
+import TimesheetForm from "./Pages/TimesheetForm";
+import TimesheetDisplay from "./Pages/TimesheetDisplay";
 
 function App() {
   const handleSignOut = () => {
     alert("Signing out...");
   };
 
+  const [submittedData, setSubmittedData] = useState({});
+
   return (
     <>
-      <div>
-        <Navbar username="John Doe" onSignOut={handleSignOut} />
-        <Timesheet />
+      <Navbar username="John Doe" onSignOut={handleSignOut} />
+      <div style={{paddingLeft: 20}}>
+        <TimesheetForm onSubmit={(data) => setSubmittedData(data)} />
+        <TimesheetDisplay data={submittedData} />
       </div>
     </>
   );
